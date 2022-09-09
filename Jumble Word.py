@@ -50,10 +50,7 @@ def shuffler():
 
 #Create answer Function
 def answer():
-    if word == entry_answer.get():
-        answer_label.config(text="Correct!!")
-    else:
-        answer_label.config(text="Incorrect!!")
+   
 
 # Create Hint Counter
 global hint_count
@@ -61,16 +58,7 @@ hint_count = 0
 
 # Create Hint Function
 def hint(count):
-    global hint_count
-    hint_count = count
-
-    # Get the length of the chosen word
-    word_length = len(word)
-
-    # Show Hint
-    if count < word_length:
-        hint_label.config(text=f'{hint_label["text"]} {word[count]}')
-        hint_count +=1 
+    
 
 entry_answer = Entry(root, font=("Helvetica", 24))
 entry_answer.pack(pady=20)
